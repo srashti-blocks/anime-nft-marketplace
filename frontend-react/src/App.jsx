@@ -126,6 +126,7 @@ import { useState } from "react";
 import { ethers } from "ethers";
 import contractData from "./AnimeNFT.json";
 import "./App.css";
+import { useEffect } from "react";
 
 const CONTRACT_ADDRESS = "0x7372AE92618b8320561FDa9B2D367257F45F2bDa";
 const CONTRACT_ABI = contractData.abi;
@@ -161,6 +162,7 @@ function App() {
   const [contract, setContract] = useState(null);
   const [minting, setMinting] = useState(null);
   const [ownedTokens, setOwnedTokens] = useState([]);
+  const [mintedTokens, setMintedTokens] = useState([]);
 
   async function connectWallet() {
     if (!window.ethereum) {
@@ -192,7 +194,23 @@ function App() {
   }
   setOwnedTokens(owned);
 }
-
+async function checkMintedStatus(nftContract) {
+  const minted = [];
+  for (let tokenId = 0; tokenId < characters.length; tokenId++) {
+    try {
+      await nftContract.ownerOf(tokenId);
+      minted.push(tokenId);
+    } catch (err) {
+      
+    }
+  }
+  setMintedTokens(minted);
+}
+useEffect(() => {
+  const readProvider = new ethers.BrowserProvider(window.ethereum || ethers.getDefaultProvider());
+  const readContract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, readProvider);
+  checkMintedStatus(readContract);
+}, []);
   async function mintCharacter(index, name) {
     if (!contract) {
       alert("Connect your wallet first");
@@ -203,6 +221,8 @@ function App() {
       // const tempURI = `ipfs://placeholder-${index}`;
       const tx = await contract.mint(characters[index].metadataURI);
       await tx.wait();
+      await loadOwnedTokens(contract, walletAddress);
+      await checkMintedStatus(contract);
       alert(`${name} minted!`);
     } catch (err) {
       console.error(err);
@@ -217,17 +237,17 @@ function App() {
       <header>
         <h1>JJK Anime NFT Collection</h1>
         <button onClick={connectWallet}>Connect Wallet</button>
-        {walletAddress && <p>Connected: {walletAddress}</p>}
+        {walletAddress && <p>Connected: user </p>}
       </header>
 
-      <main className="gallery">
+      <main className="main-content">
         {walletAddress && (
   <section className="my-collection">
     <h2>My Collection</h2>
     {ownedTokens.length === 0 ? (
       <p>You don't own any characters yet.</p>
     ) : (
-      <div className="gallery">
+      <div className="cards-grids">
         {ownedTokens.map((tokenId) => (
           <div className="card" key={`owned-${tokenId}`}>
             <img src={characters[tokenId].image} alt={characters[tokenId].name} />
@@ -239,7 +259,11 @@ function App() {
     )}
   </section>
 )}
-        {characters.map((char, index) => (
+{/* Filter out already owned characters before mapping */}
+   <section className="available-nfts"><h2>Available to Mint</h2>
+   <div className="cards-grids">
+        {characters.map((char, index) => ({ char, index }))
+    .filter(({ index }) => !ownedTokens.includes(index)).map(({char, index}) => (
           <div className="card" key={char.name}>
             <img src={char.image} alt={char.name} />
             <h3>{char.name}</h3>
@@ -248,8 +272,11 @@ function App() {
             </button>
           </div>
         ))}
+        </div>
+      </section>
       </main>
     </div>
+  
   );
 }
 
