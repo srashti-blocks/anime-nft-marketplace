@@ -1,0 +1,9 @@
+{
+  "name": "Nobara Kugisaki",
+  "description": "A fierce sorcerer who channels cursed energy through her straw doll and nails.",
+  "image": "ipfs://bafybeihtk54x3j2sc27yvvpdd2oie4jgy743u5n3msf2hvdil5ebqnujo4",
+  "attributes": [
+    { "trait_type": "Role", "value": "Resonance Specialist" },
+    { "trait_type": "Grade", "value": "Grade 3" }
+  ]
+}

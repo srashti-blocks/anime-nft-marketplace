@@ -1,0 +1,9 @@
+{
+  "name": "Todo Aoi",
+  "description": "An exceptionally strong physical brawler who uses the Boogie Woogie technique to swap positions instantly.",
+  "image": "ipfs://bafybeicxfbs3uposmt27l4fyzepwfapndmo6qg5nrr6lvceemaphbjzjou",
+  "attributes": [
+    { "trait_type": "Role", "value": "Boogie Woogie Master" },
+    { "trait_type": "Grade", "value": "Grade 1" }
+  ]
+}

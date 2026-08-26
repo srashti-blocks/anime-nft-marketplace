@@ -1,0 +1,9 @@
+{
+  "name": "Megumi Fushiguro",
+  "description": "A tactical sorcerer capable of summoning powerful shadows using the Ten Shadows Technique.",
+  "image": "ipfs://bafybeiekej6qpfk5mrpnrjwxhtynvoesyxjohsvnskbibuarzllmxvtuyi",
+  "attributes": [
+    { "trait_type": "Role", "value": "Shadow Summoner" },
+    { "trait_type": "Grade", "value": "Grade 2" }
+  ]
+}

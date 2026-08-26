@@ -1,0 +1,9 @@
+{
+  "name": "Yuji Itadori",
+  "description": "A powerful vessel with immense physical strength and raw cursed energy.",
+  "image": "ipfs://bafybeigvpzd6turop6kgmm4dy4t6h5eg7xtybplop4wbvvxkisabu7lpxq",
+  "attributes": [
+    { "trait_type": "Role", "value": "Vessel" },
+    { "trait_type": "Grade", "value": "Grade 1" }
+  ]
+}

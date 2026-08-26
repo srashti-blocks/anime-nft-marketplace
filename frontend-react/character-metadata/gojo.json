@@ -1,0 +1,9 @@
+{
+  "name": "Satoru Gojo",
+  "description": "The strongest sorcerer alive, wielder of the Six Eyes and the Limitless technique.",
+  "image": "ipfs://bafybeigkrl27xnlm5kuz7ulp5ddujbnifumwor74dkj7dj7wfzsv7fzloy",
+  "attributes": [
+    { "trait_type": "Role", "value": "Special Grade Sorcerer" },
+    { "trait_type": "Grade", "value": "Special Grade" }
+  ]
+}

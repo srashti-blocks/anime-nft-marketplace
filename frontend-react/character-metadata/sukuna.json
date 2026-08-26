@@ -1,0 +1,9 @@
+{
+  "name": "Sukuna",
+  "description": "The undisputed King of Curses, possessor of immense dark energy and razor-sharp slashing techniques.",
+  "image": "ipfs://bafybeidui4ai4lp2w3lgxgkponmw7o4zzr4xarufeaselqfgdhagsbf5vq",
+  "attributes": [
+    { "trait_type": "Role", "value": "King of Curses" },
+    { "trait_type": "Grade", "value": "Special Grade" }
+  ]
+}
