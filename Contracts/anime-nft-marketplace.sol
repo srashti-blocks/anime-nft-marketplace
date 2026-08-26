@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract AnimeNFT is ERC721, Ownable {
     uint256 public nextTokenId;
-    uint256 public constant MAX_SUPPLY = 8;
+    uint256 public constant MAX_SUPPLY = 6;
     mapping(uint256 => string) private _tokenURIs;
 
     constructor() ERC721("JJK Anime NFT", "JJKNFT") Ownable(msg.sender) {}
