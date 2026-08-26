@@ -132,12 +132,12 @@ const CONTRACT_ADDRESS = "0x7372AE92618b8320561FDa9B2D367257F45F2bDa";
 const CONTRACT_ABI = contractData.abi;
 
 
-import yujiItadori from "./assets/images/yuji_itadori.png.png";
-import megumiFushiguro from "./assets/images/megumi_Fushiguro.png.png";
-import nobaraKugisaki from "./assets/images/nobara_kugisaki.png.png";
-import satoruGojo from "./assets/images/Satoru_gojo.png.png";
-import sukuna from "./assets/images/Sukuna.png.png";
-import todoAoi from "./assets/images/Todo_aoi.png.png";
+import yujiItadori from "./assets/images/yuji_itadori.png";
+import megumiFushiguro from "./assets/images/megumi_Fushiguro.png";
+import nobaraKugisaki from "./assets/images/nobara_kugisaki.png";
+import satoruGojo from "./assets/images/Satoru_gojo.png";
+import sukuna from "./assets/images/Sukuna.png";
+import todoAoi from "./assets/images/Todo_aoi.png";
 
 const characters = [
   { name: "Yuji Itadori", image: yujiItadori, metadataURI: "ipfs://bafkreifym2u2han27c6ggbrbd4473wnti5pedxvv7jqy7qp4am7lvw7kka", },
