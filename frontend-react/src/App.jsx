@@ -11,7 +11,7 @@ const CONTRACT_ABI = contractData.abi;
 
 import yujiItadori from "./assets/images/yuji_itadori.png";
 import megumiFushiguro from "./assets/images/Megumi_Fushiguro.png";
-import nobaraKugisaki from "./assets/images/Nobara_kugisaki.png";
+import nobaraKugisaki from "./assets/images/Nobara_Kugisaki.png";
 import satoruGojo from "./assets/images/Satoru_Gojo.png";
 import sukuna from "./assets/images/Sukuna.png";
 import todoAoi from "./assets/images/Todo_aoi.png";
